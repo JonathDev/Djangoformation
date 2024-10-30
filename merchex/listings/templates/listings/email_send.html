@@ -1,0 +1,7 @@
+{% extends 'listings/base.html' %}
+
+{% block mail %}
+<h2>Email envoyé</h2>
+<p>Votre message a été envoyé avec succès. Nous vous contacterons bientôt !</p>
+<a href="{% url 'contact' %}">Retour au formulaire de contact</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+
+{% extends 'listings/base.html' %}
+
+{%block listing %}
+<p> mes affiches préférés</p>
+<ul>
+    {%for listing in listings%}
+    <!--<li>{{listing.title}}</li>-->
+    <li><a href="{% url 'listing_detail' listing.id %}">{{listing.title}}</a></li>- <a href="{% url 'listing_update' listing.id %}">[modifier]</a>-<a href="{% url 'listing_delete' listing.id %}">[supprimer]</a>
+    {%endfor %}
+</ul>
+
+<a href="{% url 'listing-create' %}">Créer un nouveau objet</a>
+{% endblock %}
